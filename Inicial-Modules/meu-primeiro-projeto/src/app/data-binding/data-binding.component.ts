@@ -19,6 +19,11 @@ export class DataBindingComponent implements OnInit {
   // Event Biding
   public position: {x:number, y: number} = {x: 0, y: 0} 
 
+
+  // Twoo Way Biding
+  public twoWayDataInput?:string;
+
+
   constructor() { }
 
   ngOnInit(): void {
