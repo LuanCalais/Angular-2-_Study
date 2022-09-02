@@ -1,11 +1,11 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-title',
   templateUrl: './title.component.html',
   styleUrls: ['./title.component.scss']
 })
-export class TitleComponent implements OnInit, OnChanges {
+export class TitleComponent implements OnInit, OnChanges, OnDestroy {
 
  @Input() public title:string = 'Olá Mundo'
 
@@ -19,7 +19,14 @@ export class TitleComponent implements OnInit, OnChanges {
 
   // ngOnInit - Ciclo de vida do componente(Explicado no app.component.ts)
   ngOnInit(): void {
-    console.log('ngOnInit do title component iniciado')
+    console.log('ngOnInit do title component ativado')
+  }
+
+
+  // ngOnDestroy - Esse evendo é executado quando destruímos um componente
+  ngOnDestroy(): void{
+    // Imprime aviso de componente destruído
+    console.log('ngOnDestroy do title component ativado')
   }
 
 }

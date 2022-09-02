@@ -6,7 +6,11 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
   template: `
   {{valor}}
   <button (click)="adicionar()">ADD</button>
-  <app-title title='Aula ciclo de vida de componentes'></app-title>
+  <app-title *ngIf="destruir" title='Aula ciclo de vida de componentes'></app-title>
+  <br>
+  <button (click)="destruirComponent()">Ng-Destroy</button>
+  <br>
+  <br>
   <router-outlet></router-outlet>` // Hack Organização do componentes
 })
 export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewChecked, AfterViewInit {
@@ -28,36 +32,47 @@ export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
   // Tem seu início após a criação do componente(Nesse caso na inicialização da aplicação), SEGUNDO lifehook na ordem dos componente
   ngOnInit(): void {
     setTimeout(() => {
-      this.log('NgOnIniti Criado')
+      this.log('NgOnIniti Ativado')
     }, 5000);
   }
 
   // ngDoCheck - Este evento é disparado sempre que as propriedades de entrada de um componente são verificadas
   ngDoCheck(): void {
-    this.log('DoCheck Criado')
+    this.log('DoCheck Ativado')
   }
 
   // Filhos doo ngDoCheck -------------------------------
 
   // ngAfterContentInit - Este evento é disparado quando o angular realiza qualquer projeção de conteúdo nas visualizações do componente 
   ngAfterContentInit(): void {
-    this.log('ngAfterContentInit Criado')
+    this.log('ngAfterContentInit Ativado')
   }
   
   //ngAfterContentChecked - Este evento é disparado sempre que o conteúdo do componente é verificado pelo mecanismo de detectção de alteração do Angular, por exemplo='1+1=2' invocaria esse evento
   ngAfterContentChecked(): void {
-    this.log('ngAfterContentChecked Criado')
+    this.log('ngAfterContentChecked Ativado')
   }
   
   
-  //ngAfterViewInit - Esse evento é executado quando a visualização do componente foi totalmente inicializada(Tudo que você pretendia mostrar já foi criado)'
+  //ngAfterViewInit - Esse evento é executado quando a visualização do componente foi totalmente inicializada(Tudo que você pretendia mostrar já foi Ativado)'
   ngAfterViewInit(): void {
-    this.log('ngAfterViewInit Criado')
+    this.log('ngAfterViewInit Ativado')
   }
   
   // ngAferViewChecked - Esse evento é executado quando a visualzação de um componente foi verificada pelo algoritmo de detecção de aleração do Angular
   ngAfterViewChecked(): void {
-    this.log('ngAfterViewChecked Criado')
+    this.log('ngAfterViewChecked Ativado')
   }
+
+  // Variável de controle usado no ngIf 
+  public destruir:boolean = true
+
+  // Evento de auxílio para demonstração de ngOnDestroy
+  public destruirComponent():void{
+    this.destruir = false
+  }
+
+  // ngOnDestroy definido no title.component.ts
+
   
 }
