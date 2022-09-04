@@ -1,0 +1,23 @@
+<!-- for true ele executa uma condição, se não ele executa outra -->
+<p *ngIf="condition; else elseBlock">True</p>
+
+<!-- fluxo do else -->
+<ng-template #elseBlock>
+    <p>
+        False
+    </p>
+</ng-template>
+
+<hr>
+
+<!-- Mostra quando conditionClick for true -->
+<p *ngIf="conditionClick">
+    True
+</p>
+
+<!-- Mostra quando conditionClick for false -->
+<p *ngIf="!conditionClick">
+    False
+</p>
+
+<button (click)="onClick()">Click</button>
