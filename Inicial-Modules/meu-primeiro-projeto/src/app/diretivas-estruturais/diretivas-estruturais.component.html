@@ -32,3 +32,24 @@
 
 <button (click)="onClickAddList()">Add</button>&nbsp;&nbsp;
 <button (click)="onClickRemoveList()">Remove</button>
+
+<hr>
+
+<!-- NG-SWITCH -->
+
+<input type="text" name="txtNome" id="txtNome" [(ngModel)]="nome">
+<div [ngSwitch]="nome">
+
+    <p *ngSwitchCase="'luan'">
+        Olá eu sou o luan
+    </p>
+
+    <p *ngSwitchCase="'marilia'">
+        Olá eu sou a marilinha linda
+    </p>
+
+    <p *ngSwitchCase="'emma'">
+        Olá eu sou a emma
+    </p>
+
+</div>

@@ -17,6 +17,8 @@ export class DiretivasEstruturaisComponent implements OnInit {
     { nome: "Emma", idade: 1 }
   ]
 
+  public nome: string = 'emma'
+
   constructor() { }
 
   ngOnInit(): void {
@@ -51,7 +53,7 @@ export class DiretivasEstruturaisComponent implements OnInit {
 
   public onClickEventList(e:MouseEvent, index:number): void{
     console.log(index)
-    
+
     // Remove esse item da lista
     this.list.splice(index, 1)
   }
