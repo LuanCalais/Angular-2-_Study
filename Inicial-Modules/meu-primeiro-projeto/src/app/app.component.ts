@@ -5,6 +5,7 @@ import { Component } from '@angular/core'; //Define um componente
   selector: 'app-root',
   template: `
   <app-diretivas-estruturais></app-diretivas-estruturais>
+  <app-diretivas-atributo></app-diretivas-atributo>
   <router-outlet></router-outlet>
   `
 })

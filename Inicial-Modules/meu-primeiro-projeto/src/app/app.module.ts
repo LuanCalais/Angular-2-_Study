@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title.component';
 import { DiretivasEstruturaisComponent } from './diretivas-estruturais/diretivas-estruturais.component';
+import { DiretivasAtributoComponent } from './diretivas-atributo/diretivas-atributo.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TitleComponent,
-    DiretivasEstruturaisComponent
+    DiretivasEstruturaisComponent,
+    DiretivasAtributoComponent
   ],
   imports: [
     BrowserModule,
