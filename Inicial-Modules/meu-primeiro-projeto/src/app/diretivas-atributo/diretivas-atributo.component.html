@@ -1,3 +1,6 @@
+<!-- O select define quais os valores vindos de fora o ng-content irá capturar -->
+<ng-content select="h1"></ng-content>
+
 <h2>Diretivas de Atributo</h2>
 
 <!-- NG-CLASS -->
@@ -39,3 +42,12 @@ no exemplo abaixo a dom apenas renderiza a tag <p> se essa lsita estiver populad
         {{item.nome}}
     </p>
 </ng-template>
+
+<hr>
+
+<!-- NG-CONTENT -->
+
+<!-- ng-content é usado para caso presarmos usar um componente em outros lugares ele inicar com um outro valor dentro de algum elemento html, no <h1> por exemplo, aplicado dentro da tag personalizada em app.component.ts-->
+<ng-content select="hr"></ng-content> 
+
+<ng-content select="h3"></ng-content>
