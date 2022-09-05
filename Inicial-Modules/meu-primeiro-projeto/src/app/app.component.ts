@@ -4,6 +4,7 @@ import { Component } from '@angular/core'; //Define um componente
 @Component({
   selector: 'app-root',
   template: `
+  <app-new-component></app-new-component>
   <app-diretivas-estruturais></app-diretivas-estruturais>
   
   <app-diretivas-atributo>

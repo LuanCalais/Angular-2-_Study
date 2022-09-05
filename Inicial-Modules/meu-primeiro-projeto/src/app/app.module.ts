@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title.component';
 import { DiretivasEstruturaisComponent } from './diretivas-estruturais/diretivas-estruturais.component';
 import { DiretivasAtributoComponent } from './diretivas-atributo/diretivas-atributo.component';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -21,7 +22,9 @@ import { DiretivasAtributoComponent } from './diretivas-atributo/diretivas-atrib
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    FormsModule
+    FormsModule,
+    // Módulo externo import
+    SharedModule
   ],
 
   // Declara services para requisições ao backend
@@ -30,5 +33,4 @@ import { DiretivasAtributoComponent } from './diretivas-atributo/diretivas-atrib
   // Apenas utilizado no componente principal, indica que é a parte do aplicativo que vai startar toda a aplicação(appStarter)
   bootstrap: [AppComponent]
 })
-// Exporta componentes 
 export class AppModule { }
