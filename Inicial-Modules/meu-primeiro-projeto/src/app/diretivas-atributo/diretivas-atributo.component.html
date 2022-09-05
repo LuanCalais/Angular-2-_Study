@@ -24,5 +24,18 @@
 <li *ngFor="let item of list">{{item.nome}}</li>
 
 <div *ngIf="nomeModelo !== 'luan'">
-    Esconde e mostra com condição do ngm-odel
+    Esconde e mostra com condição do ng-model
 </div>
+
+<hr>
+
+<!-- NG-TEMPLATE -->
+
+<!-- ng-template é de maneira suscinta um elemento html limpo e leve, feito geralmente para validações,
+
+no exemplo abaixo a dom apenas renderiza a tag <p> se essa lsita estiver populada, isso melhora a performance da aplicação-->
+<ng-template ngFor let-item [ngForOf]="list2">
+    <p>
+        {{item.nome}}
+    </p>
+</ng-template>

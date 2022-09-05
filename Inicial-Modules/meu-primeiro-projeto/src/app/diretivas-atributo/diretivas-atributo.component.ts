@@ -14,6 +14,7 @@ export class DiretivasAtributoComponent implements OnInit {
   public nomeModelo?: string
 
   public list: Array<{nome: string | undefined}> = []
+  public list2: Array<{nome: string}> = [{nome: 'Luan Calais'}, {nome: 'Marilia Lima'}, {nome: 'Emma'}]
 
   constructor() { }
 
