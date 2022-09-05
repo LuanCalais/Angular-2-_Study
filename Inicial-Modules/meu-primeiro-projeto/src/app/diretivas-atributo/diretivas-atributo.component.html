@@ -13,3 +13,16 @@
 <p [ngStyle]="{'height': height, 'border': border}">
     Ng-style
 </p>
+
+<hr>
+
+<!-- NG-MODEL -->
+
+<input type="text" [(ngModel)]="nomeModelo">
+<button (click)="salvar()">Salvar</button>
+
+<li *ngFor="let item of list">{{item.nome}}</li>
+
+<div *ngIf="nomeModelo !== 'luan'">
+    Esconde e mostra com condição do ngm-odel
+</div>

@@ -11,6 +11,10 @@ export class DiretivasAtributoComponent implements OnInit {
   public height: string = "20px"
   public border: string = "1px solid red"
 
+  public nomeModelo?: string
+
+  public list: Array<{nome: string | undefined}> = []
+
   constructor() { }
 
   ngOnInit(): void {
@@ -32,8 +36,13 @@ export class DiretivasAtributoComponent implements OnInit {
         this.border = '1px dotted green'
       }
 
-    }, 2000)
+    }, 10000)
 
+  }
+
+  public salvar():void{
+    this.list.push({nome: this.nomeModelo})
+    this.nomeModelo = ''
   }
 
 }
