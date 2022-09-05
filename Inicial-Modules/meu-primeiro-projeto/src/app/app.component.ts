@@ -18,7 +18,7 @@ import { Component } from '@angular/core'; //Define um componente
   <h3>Olá mundo</h3>
   </app-diretivas-atributo>
 
-
+  <app-diretivas-atributo></app-diretivas-atributo>
 
   <router-outlet></router-outlet>
   `
