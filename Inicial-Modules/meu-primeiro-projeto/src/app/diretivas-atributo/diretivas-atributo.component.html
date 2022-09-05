@@ -1,0 +1,71 @@
+<!-- O select define quais os valores vindos de fora o ng-content irá capturar -->
+<ng-content select="h1"></ng-content>
+
+<h2>Diretivas de Atributo</h2>
+
+<!-- NG-CLASS -->
+
+<!-- Aplica active se 'valor' for true, e disabled se 'valor' for false -->
+<p [ngClass]="{'active': valor,'disabled': !valor}">
+    Ng-class
+</p>
+
+<hr>
+
+<!-- NG-STYLE -->
+<p [ngStyle]="{'height': height, 'border': border}">
+    Ng-style
+</p>
+
+<hr>
+
+<!-- NG-MODEL -->
+
+<input type="text" [(ngModel)]="nomeModelo">
+<button (click)="salvar()">Salvar</button>
+
+<li *ngFor="let item of list">{{item.nome}}</li>
+
+<div *ngIf="nomeModelo !== 'luan'">
+    Esconde e mostra com condição do ng-model
+</div>
+
+<hr>
+
+<!-- NG-TEMPLATE -->
+
+<!-- ng-template é de maneira suscinta um elemento html limpo e leve, feito geralmente para validações,
+
+no exemplo abaixo a dom apenas renderiza a tag <p> se essa lsita estiver populada, isso melhora a performance da aplicação-->
+<ng-template ngFor let-item [ngForOf]="list2">
+    <p>
+        {{item.nome}}
+    </p>
+</ng-template>
+
+<hr>
+
+<!-- NG-CONTENT -->
+
+<!-- ng-content é usado para caso presarmos usar um componente em outros lugares ele inicar com um outro valor dentro de algum elemento html, no <h1> por exemplo, aplicado dentro da tag personalizada em app.component.ts-->
+<ng-content select="hr"></ng-content> 
+
+<ng-content select="h3"></ng-content>
+
+<hr>
+
+<!-- PIPES -->
+
+<!-- Pipes pega as informações de interpolaion e aplica ou modifica algo -->
+
+<input type="text" [(ngModel)]="nomeModelo">
+<button (click)="salvar()">Salvar</button>
+
+<li *ngFor="let item of list">{{item.nome | uppercase}}</li>
+
+<br>
+<br>
+
+<p>
+    {{date | date: 'dd/MM/yyyy'}}
+</p>
