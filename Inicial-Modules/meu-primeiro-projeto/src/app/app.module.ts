@@ -3,19 +3,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TitleComponent } from './title/title.component';
-import { DiretivasEstruturaisComponent } from './diretivas-estruturais/diretivas-estruturais.component';
-import { DiretivasAtributoComponent } from './diretivas-atributo/diretivas-atributo.component';
 import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
   // Declara componentes dentro desse módulo
   declarations: [
-    AppComponent,
-    TitleComponent,
-    DiretivasEstruturaisComponent,
-    DiretivasAtributoComponent
+    AppComponent
   ],
 
   // Importa funcionalidades de outros componentes
@@ -23,7 +17,6 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     AppRoutingModule, 
     FormsModule,
-    // Módulo externo import
     SharedModule
   ],
 
