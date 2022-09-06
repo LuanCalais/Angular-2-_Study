@@ -7,23 +7,19 @@ import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
-  // Declara componentes dentro desse módulo
   declarations: [
     AppComponent
   ],
 
-  // Importa funcionalidades de outros componentes
   imports: [
     BrowserModule,
-    AppRoutingModule, 
+    AppRoutingModule,
     FormsModule,
     SharedModule
   ],
 
-  // Declara services para requisições ao backend
   providers: [],
 
-  // Apenas utilizado no componente principal, indica que é a parte do aplicativo que vai startar toda a aplicação(appStarter)
   bootstrap: [AppComponent]
 })
 export class AppModule { }
