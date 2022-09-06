@@ -7,6 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class OutputComponent implements OnInit {
 
+  // new EventEmitter() - transforma em um evento para que seja capturado do lado de fora
   // Envia dados para o app.component.ts como um novo emissor de evento
   @Output() public enviarDados = new EventEmitter();
 
