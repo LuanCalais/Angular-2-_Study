@@ -9,6 +9,10 @@ import { Component } from '@angular/core'; //Define um componente
   <br>
   <button (click)="Add()">Add</button>
   <button (click)="Remove()">Remove</button>
+  <br>
+  <br>
+  <hr>
+  <app-output></app-output>
   <router-outlet></router-outlet>
   `
 })
