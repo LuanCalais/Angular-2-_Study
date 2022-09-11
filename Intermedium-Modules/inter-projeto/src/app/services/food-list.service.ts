@@ -22,4 +22,8 @@ export class FoodListService {
     return this.list
   }
 
+  public setFoodList(value: string): void {
+    this.list.push(value)
+  }
+
 }
