@@ -26,6 +26,12 @@ export class FoodListComponent implements OnInit {
 
     this.foodList = this.foodListService.getFoodList()
 
+    // Sempre que essa função estiver ativa iremos ser inscritos, retornando um success ou error
+    this.foodListService.emitEvent.subscribe({
+      next: (res: any) => alert(`Você adicionou o item: ${res}`),
+      error: (err: any) => alert(err)
+    })
+
   }
 
 }
