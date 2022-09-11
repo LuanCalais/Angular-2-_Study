@@ -13,11 +13,6 @@ export class FoodListService {
   public emitEvent = new EventEmitter()
 
   private list: Array<string> = [
-    "X-Bacon",
-    "X-Salada",
-    "X-Egg",
-    "Bolinho de Queijo",
-    "Refrigerante"
   ]
 
   constructor() { }
